@@ -1,0 +1,19 @@
+version: "3"
+services:
+  nodocker:
+    build:
+      context: .
+      args:
+        NODE_ENV: DEV
+    volumes:
+      - ./:/app:ro
+      - /app/node_modules
+    environment:
+      - NODE_ENV=DEV
+      - MONGO_USER=admin
+      - MONGO_PASSWORD=password
+    command: npm run dev
+  mongo:
+    environment:
+      - MONGO_INITDB_ROOT_USERNAME=admin
+      - MONGO_INITDB_ROOT_PASSWORD=password

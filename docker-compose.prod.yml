@@ -1,0 +1,10 @@
+version: "3"
+services:
+  nodocker:
+    build:
+      context: .
+      args:
+        NODE_ENV: PROD
+    environment:
+      - NODE_ENV=PROD
+    command: npm start
