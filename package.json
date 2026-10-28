@@ -17,5 +17,10 @@
   },
   "devDependencies": {
     "nodemon": "^2.0.15"
+  },
+  "overrides": {
+    "simple-update-notifier": {
+      "semver": "7.5.2"
+    }
   }
 }
